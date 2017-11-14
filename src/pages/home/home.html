@@ -1,14 +1,22 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Lazy Load Shit
     </ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+
+  <button ion-button (click)="gotoInfoPage()">Go to info page</button>
+
+  <ion-list>
+    <ion-item button *ngFor="let item of myItems" (click)="showDesc(item)" ion-item >
+      {{item.item}}
+    </ion-item>
+  </ion-list>
+
+
 </ion-content>
